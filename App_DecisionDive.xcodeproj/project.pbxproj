@@ -11,6 +11,14 @@
 		143039262B395E35008DF17D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039252B395E35008DF17D /* ContentView.swift */; };
 		143039282B395E36008DF17D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143039272B395E36008DF17D /* Assets.xcassets */; };
 		1430392B2B395E36008DF17D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1430392A2B395E36008DF17D /* Preview Assets.xcassets */; };
+		143039322B395E94008DF17D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039312B395E94008DF17D /* SplashScreen.swift */; };
+		143039342B395EBF008DF17D /* YourPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039332B395EBF008DF17D /* YourPathView.swift */; };
+		143039362B395EE1008DF17D /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039352B395EE1008DF17D /* DestinationView.swift */; };
+		143039382B395EF2008DF17D /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039372B395EF2008DF17D /* SportView.swift */; };
+		1430393A2B395F05008DF17D /* DiscoverSelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039392B395F05008DF17D /* DiscoverSelfView.swift */; };
+		1430393D2B395F43008DF17D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1430393F2B395F43008DF17D /* Localizable.strings */; };
+		143039432B395FB6008DF17D /* DarkVid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 143039412B395F9F008DF17D /* DarkVid.mp4 */; };
+		143039442B395FB6008DF17D /* Vid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 143039422B395FA4008DF17D /* Vid.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,15 @@
 		143039252B395E35008DF17D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		143039272B395E36008DF17D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1430392A2B395E36008DF17D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		143039312B395E94008DF17D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		143039332B395EBF008DF17D /* YourPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourPathView.swift; sourceTree = "<group>"; };
+		143039352B395EE1008DF17D /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
+		143039372B395EF2008DF17D /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
+		143039392B395F05008DF17D /* DiscoverSelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSelfView.swift; sourceTree = "<group>"; };
+		1430393E2B395F43008DF17D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		143039402B395F44008DF17D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		143039412B395F9F008DF17D /* DarkVid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = DarkVid.mp4; path = "../../DecisionDive-App/DecisionDive App/DarkVid.mp4"; sourceTree = "<group>"; };
+		143039422B395FA4008DF17D /* Vid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Vid.mp4; path = "../../DecisionDive-App/DecisionDive App/Vid.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +69,16 @@
 			isa = PBXGroup;
 			children = (
 				143039232B395E35008DF17D /* App_DecisionDiveApp.swift */,
+				143039332B395EBF008DF17D /* YourPathView.swift */,
 				143039252B395E35008DF17D /* ContentView.swift */,
+				1430393F2B395F43008DF17D /* Localizable.strings */,
+				143039352B395EE1008DF17D /* DestinationView.swift */,
+				143039372B395EF2008DF17D /* SportView.swift */,
+				143039392B395F05008DF17D /* DiscoverSelfView.swift */,
+				143039312B395E94008DF17D /* SplashScreen.swift */,
 				143039272B395E36008DF17D /* Assets.xcassets */,
+				143039412B395F9F008DF17D /* DarkVid.mp4 */,
+				143039422B395FA4008DF17D /* Vid.mp4 */,
 				143039292B395E36008DF17D /* Preview Content */,
 			);
 			path = App_DecisionDive;
@@ -109,6 +134,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 143039172B395E35008DF17D;
 			productRefGroup = 143039212B395E35008DF17D /* Products */;
@@ -125,7 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143039432B395FB6008DF17D /* DarkVid.mp4 in Resources */,
+				143039442B395FB6008DF17D /* Vid.mp4 in Resources */,
 				1430392B2B395E36008DF17D /* Preview Assets.xcassets in Resources */,
+				1430393D2B395F43008DF17D /* Localizable.strings in Resources */,
 				143039282B395E36008DF17D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +166,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143039342B395EBF008DF17D /* YourPathView.swift in Sources */,
+				1430393A2B395F05008DF17D /* DiscoverSelfView.swift in Sources */,
+				143039322B395E94008DF17D /* SplashScreen.swift in Sources */,
+				143039362B395EE1008DF17D /* DestinationView.swift in Sources */,
+				143039382B395EF2008DF17D /* SportView.swift in Sources */,
 				143039262B395E35008DF17D /* ContentView.swift in Sources */,
 				143039242B395E35008DF17D /* App_DecisionDiveApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1430393F2B395F43008DF17D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1430393E2B395F43008DF17D /* en */,
+				143039402B395F44008DF17D /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1430392C2B395E36008DF17D /* Debug */ = {

@@ -1,0 +1,84 @@
+/*
+  Localizable.strings
+  test
+
+  Created by Noura Alqahtani on 20/12/2023.
+  
+*/
+
+
+
+
+
+
+//content view
+
+/////////////////////////////////////////////////////////////////////
+
+"StartYourJourney1" = "Start Your Journey ";
+"DiscoverYourSelf1" = "Discover Your Self";
+"FindYourDestination1" = "Find Your Destination";
+"FindYourSport1" = "Find Your Sport";
+"FindYourPath1" = "Find Your Path";
+"Note:advicesprovidedaregeneraladvices1" = "Note: advices provided are general advices";
+"forassistancepurposesonly!1" = "for assistance purposes only!";
+
+//////////////////////////////////////////////////////////////////////
+
+//your path
+
+/////////////////////////////////////////////////////////////////////
+
+"Do you like deal with numbers1" = "Do you like deal with numbers?";
+"Do you have a creative mindset1" = "Do you have a creative mindset?";
+"Are you a logical thinker 1" = "Are you a logical thinker? ";
+"do you like being physically active 1" = "do you like being physically active?";
+
+"Economist Accountant1" = "Economist , Accountant";
+"marketing graphic designer1" = "copy writer , marketing , graphic designer";
+"Engineering Sciences 1" = "Engineering , Sciences";
+"personal athletictrainer physicaltherapist chiropractor 1" = "personal / athletic trainer, physical therapist, chiropractor";
+
+//////////////////////////////////////////////////////////////////////
+
+// Your Destination
+
+/////////////////////////////////////////////////////////////////////
+
+"Warm and tropical, relaxing on \n the beach, low budget:1" = "Warm and tropical, relaxing on \n the beach, low budget:";
+"Cold and snowy, engaging in outdoor adventures, high budget1" = "Cold and snowy, engaging in outdoor adventures, high budget";
+"Extended stay, local food, with family or friends1" = "Extended stay, local food, with family or friends";
+
+"Thailand1" = "Thailand";
+"Switzerland1" = "Switzerland";
+"Bali, Indonesia1" = "Bali, Indonesia";
+
+//////////////////////////////////////////////////////////////////////
+
+// Your sport
+
+/////////////////////////////////////////////////////////////////////
+
+"Team sports, Outdoor activities1" = "Team sports, Outdoor activities";
+"Moderate activity with occasional challenges, Mix of team and solo activities, Mix of indoor and outdoor activities, high budget1" = "Moderate activity with occasional challenges, Mix of team and solo activities, Mix of indoor and outdoor activities, high budget";
+"Low-intensity and relaxed, Solo sports, Indoor1" = "Low-intensity and relaxed, Solo sports, Indoor";
+
+"Sports: Soccer1" = "Sports: Soccer";
+"Tennis, Swimming1" = "Tennis, Swimming";
+"Yoga, Table Tennis1" = "Yoga, Table Tennis";
+
+//////////////////////////////////////////////////////////////////////
+
+// Discover your self
+
+/////////////////////////////////////////////////////////////////////
+
+"How do you want to be remembered in life?1" = "How do you want to be remembered in life?";
+"What excites you?1" = "What excites you?";
+"What are you most proud of?1" = "What are you most proud of?";
+"what’s your favorite snack?1" = "what’s your favorite snack?";
+
+"I want to be remembered by the app who helped people discover their selfs1" = "I want to be remembered by the app who helped people discover their selfs";
+"Personally, when people tell me that I helped them in life1" = "Personally, when people tell me that I helped them in life";
+"That I was created by team 22!1" = "That I was created by team 22!";
+"Dark mode (;1" = "Dark mode (;";

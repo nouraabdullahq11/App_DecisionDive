@@ -1,0 +1,78 @@
+/*
+  Localizable.strings
+  test
+
+  Created by Noura Alqahtani on 20/12/2023.
+  
+*/
+
+//content view
+
+/////////////////////////////////////////////////////////////////////
+
+"StartYourJourney1" = "ابدا رحلتك";
+"DiscoverYourSelf1" = "اكتشف نفسك";
+"FindYourDestination1" = "اكتشف وجهتك";
+"FindYourSport1" = "اختر رياضتك ";
+"FindYourPath1" ="اكتشف مهنتك";
+"Note:advicesprovidedaregeneraladvices1" = "،ملاحظة: هذه النصائح هي نصائح عامة";
+"forassistancepurposesonly!1" = "لغرض الإرشاد و المساعدة فقط ";
+
+//////////////////////////////////////////////////////////////////////
+
+//your path
+
+/////////////////////////////////////////////////////////////////////
+
+"Do you like deal with numbers1" = "هل تفضل التعامل مع الارقام؟";
+"Do you have a creative mindset1" = "هل لديك تفكير ابداعي؟";
+"Are you a logical thinker 1" = "هل تفضل التفكيرالمنطقي؟ ";
+"do you like being physically active 1" = "هل تفضل النشاط البدني؟";
+
+"Economist Accountant1" = "اقتصاد، محاسبة";
+"marketing graphic designer1" = "تسويق، مصمم جرافك";
+"Engineering Sciences 1" = "هندسة، علوم";
+"personal athletictrainer physicaltherapist chiropractor 1" = "مدرب شخصي / رياضي، معالج فيزيائي";
+
+//////////////////////////////////////////////////////////////////////
+
+// Your Destination
+
+/////////////////////////////////////////////////////////////////////
+
+"Warm and tropical, relaxing on \n the beach, low budget:1" = "دافئة و استوائية، استرخاء على الشاطئ، تكلفة قليلة";
+"Cold and snowy, engaging in outdoor adventures, high budget1" ="بارد ومثلج، ممارسة مغامرات في الهواء الطلق، ميزانية عالية";
+"Extended stay, local food, with family or friends1" ="إقامة ممتدة، طعام محلي، مع العائلة أو الأصدقاء";
+"Thailand1" ="تايلاند";
+"Switzerland1" ="سويسرا";
+"Bali, Indonesia1" ="بالي، اندونيسيا";
+
+//////////////////////////////////////////////////////////////////////
+
+// Your Sport
+
+/////////////////////////////////////////////////////////////////////
+
+"Team sports, Outdoor activities1" = "الرياضات الجماعية، الأنشطة الخارجية";
+"Moderate activity with occasional challenges, Mix of team and solo activities, Mix of indoor and outdoor activities, high budget1" = "نشاط معتدل مع تحديات عرضية، مزيج من الأنشطة الجماعية والفردية، مزيج من الأنشطة الداخلية والخارجية، ميزانية عالية";
+"Low-intensity and relaxed, Solo sports, Indoor1" = "منخفضة الشدة والاسترخاء، الرياضات الفردية، داخل المنزل";
+
+"Soccer1" = "كرة قدم";
+"Tennis, Swimming1" = "التنس، السباحة";
+"Yoga, Table Tennis1" = "اليوقا، تنس الطاولة";
+
+//////////////////////////////////////////////////////////////////////
+
+// Discover your self
+
+/////////////////////////////////////////////////////////////////////
+
+"How do you want to be remembered in life?1" = "كيف تريد ان يتذكرك الناس في حياتهم؟ ";
+"What excites you?1" = "ماهو اكثر شيء يشعرك بالحماس؟";
+"What are you most proud of?1" = "ما أكثر شيء يشعرك بالفخر؟";
+"what’s your favorite snack?1" = "ما هي الوجبة المُفضلة لديك؟";
+
+"I want to be remembered by the app who helped people discover their selfs1" = "أود أن يتذكرني  الناس بأنني التطبيق الذي ساعد الآشخاص في اكتشاف ذواتهم";
+"Personally, when people tell me that I helped them in life1" = "شخصياً، عندما يخبرني الأشخاص بأنني ساعدتهم في الحياة.";
+"That I was created by team 22!1" = "انه تم انشائي من قبل فريق ٢٢!";
+"Dark mode (;1" = "الوضع المظلم (;";
