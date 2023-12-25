@@ -17,8 +17,8 @@
 		143039382B395EF2008DF17D /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039372B395EF2008DF17D /* SportView.swift */; };
 		1430393A2B395F05008DF17D /* DiscoverSelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143039392B395F05008DF17D /* DiscoverSelfView.swift */; };
 		1430393D2B395F43008DF17D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1430393F2B395F43008DF17D /* Localizable.strings */; };
-		143039432B395FB6008DF17D /* DarkVid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 143039412B395F9F008DF17D /* DarkVid.mp4 */; };
-		143039442B395FB6008DF17D /* Vid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 143039422B395FA4008DF17D /* Vid.mp4 */; };
+		143039472B3969DB008DF17D /* DarkVid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 143039452B3969CB008DF17D /* DarkVid.mp4 */; };
+		143039482B3969DB008DF17D /* VID.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 143039462B3969CF008DF17D /* VID.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		143039392B395F05008DF17D /* DiscoverSelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverSelfView.swift; sourceTree = "<group>"; };
 		1430393E2B395F43008DF17D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		143039402B395F44008DF17D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		143039412B395F9F008DF17D /* DarkVid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = DarkVid.mp4; path = "../../DecisionDive-App/DecisionDive App/DarkVid.mp4"; sourceTree = "<group>"; };
-		143039422B395FA4008DF17D /* Vid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Vid.mp4; path = "../../DecisionDive-App/DecisionDive App/Vid.mp4"; sourceTree = "<group>"; };
+		143039452B3969CB008DF17D /* DarkVid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = DarkVid.mp4; path = ../../DarkVid.mp4; sourceTree = "<group>"; };
+		143039462B3969CF008DF17D /* VID.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = VID.mp4; path = ../../VID.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 				143039392B395F05008DF17D /* DiscoverSelfView.swift */,
 				143039312B395E94008DF17D /* SplashScreen.swift */,
 				143039272B395E36008DF17D /* Assets.xcassets */,
-				143039412B395F9F008DF17D /* DarkVid.mp4 */,
-				143039422B395FA4008DF17D /* Vid.mp4 */,
+				143039452B3969CB008DF17D /* DarkVid.mp4 */,
+				143039462B3969CF008DF17D /* VID.mp4 */,
 				143039292B395E36008DF17D /* Preview Content */,
 			);
 			path = App_DecisionDive;
@@ -151,8 +151,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				143039432B395FB6008DF17D /* DarkVid.mp4 in Resources */,
-				143039442B395FB6008DF17D /* Vid.mp4 in Resources */,
+				143039472B3969DB008DF17D /* DarkVid.mp4 in Resources */,
+				143039482B3969DB008DF17D /* VID.mp4 in Resources */,
 				1430392B2B395E36008DF17D /* Preview Assets.xcassets in Resources */,
 				1430393D2B395F43008DF17D /* Localizable.strings in Resources */,
 				143039282B395E36008DF17D /* Assets.xcassets in Resources */,

@@ -16,16 +16,18 @@ struct YourPathView: View {
         VStack {
             if isFlipped {
                 VStack {
-                    Image(systemName: "repeat")
-                        .padding(.init(top: 20, leading: 200, bottom: 150, trailing: 20))
-                        .frame(width: 28, height: 28)
-                    Text(backContent)
-                        .rotation3DEffect(
-                            .degrees(180.0),
-                            axis: (x: 0.0, y: 1.0, z: 0.0))
-                        .font(
-                            Font.custom("SF Pro Rounded", size: 36)
-                                .weight(.bold))
+                    
+                    GeometryReader { geometry in
+                        Image(systemName: "repeat")
+                            .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 200))
+                            .frame(width: 28, height: 28)
+                        Text(backContent)
+                            .rotation3DEffect(
+                                .degrees(180.0),
+                                axis: (x: 0.0, y: 1.0, z: 0.0))
+                                                   .font(.title)
+                                                   .frame(width: geometry.size.width - 20, height: geometry.size.height - 20)
+                                           }
                         .multilineTextAlignment(.center)
                 }
                 .frame(width: 270, height: 288)

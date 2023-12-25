@@ -53,7 +53,7 @@ struct SplashScreen: View {
                        
                        
                    } else {
-                       VideoSplashView(videoURL: Bundle.main.url(forResource: "Vid", withExtension: "mp4")!)
+                       VideoSplashView(videoURL: Bundle.main.url(forResource: "VID", withExtension: "mp4")!)
                                  .onAppear {
                                      delayShowBar()//
                                      

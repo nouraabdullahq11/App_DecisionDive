@@ -92,7 +92,7 @@ struct ContentView: View {
                                             
                                             Text("FindYourDestination1")
                                                 .font(
-                                                    Font.custom("SF Pro Rounded", size: 25)
+                                                    Font.custom("SF Pro Rounded", size: 20)
                                                     //.weight(.bold)
                                                 )
                                             //.multilineTextAlignment(.center)
