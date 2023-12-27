@@ -11,7 +11,7 @@ import SwiftUI
 struct App_DecisionDiveApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }

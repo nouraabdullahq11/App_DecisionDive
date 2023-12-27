@@ -40,34 +40,40 @@ struct SplashScreen: View {
     @State private var idDone = false
     @State private var timer: Timer?
     var body: some View {
+        ZStack{
+         
         Group {
-                   if colorScheme == .dark {
-                       VideoSplashView(videoURL: Bundle.main.url(forResource: "DarkVid", withExtension: "mp4")!)
-                           .onAppear {
-                               delayShowBar()
-                           }.edgesIgnoringSafeArea(.all)
-                           .fullScreenCover(isPresented: $idDone, content: {
-                               ContentView()
-                           })
-
-                       
-                       
-                   } else {
-                       VideoSplashView(videoURL: Bundle.main.url(forResource: "VID", withExtension: "mp4")!)
-                                 .onAppear {
-                                     delayShowBar()//
-                                     
-                                 }.edgesIgnoringSafeArea(.all)
-                                 .fullScreenCover(isPresented: $idDone, content: {
-                                     ContentView()
-                                 })
-                   }
-               }
-        
+            if colorScheme == .dark {
+                VideoSplashView(videoURL: Bundle.main.url(forResource: "DarkVid", withExtension: "mp4")!)
+                    .onAppear {
+                        delayShowBar()
+                    }.edgesIgnoringSafeArea(.all)
+                    .fullScreenCover(isPresented: $idDone, content: {
+                        ContentView()
+                    })
+                
+                
+                
+            } else {
+                VideoSplashView(videoURL: Bundle.main.url(forResource: "VID", withExtension: "mp4")!)
+                    .onAppear {
+                        delayShowBar()//
+                        
+                    }.edgesIgnoringSafeArea(.all)
+                    .fullScreenCover(isPresented: $idDone, content: {
+                        ContentView()
+                    })
+            }
+        }
+            Image(systemName: "heart.fill")
+                .foregroundColor(.red)
+                .padding(.top,678)
+                .padding(.leading,270)
     }
+}
     func delayShowBar() {
-        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-            idDone = true
+        timer = Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { _ in
+            //idDone = true
         }
     }
 }

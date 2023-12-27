@@ -16,19 +16,22 @@ struct YourPathView: View {
         VStack {
             if isFlipped {
                 VStack {
-                    
+                    Image(systemName: "repeat")
+                        .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 200))
+                        .foregroundColor(.black)
+
+                        .frame(width: 28, height: 28)
                     GeometryReader { geometry in
-                        Image(systemName: "repeat")
-                            .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 200))
-                            .frame(width: 28, height: 28)
                         Text(backContent)
                             .rotation3DEffect(
                                 .degrees(180.0),
                                 axis: (x: 0.0, y: 1.0, z: 0.0))
                                                    .font(.title)
-                                                   .frame(width: geometry.size.width - 20, height: geometry.size.height - 20)
+                                                   .frame(width: geometry.size.width - 10, height: geometry.size.height - 20)
                                            }
                         .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 0.16, green: 0.18, blue: 0.2))
+
                 }
                 .frame(width: 270, height: 288)
                 .background(
@@ -46,10 +49,16 @@ struct YourPathView: View {
             } else {
                 VStack{
                     Image(systemName: "repeat")
-                        .padding(.init(top: 80, leading: 200, bottom: 150, trailing: 20))
+                        .padding(.init(top: 40, leading: 200, bottom: 0, trailing: 0))
                         .frame(width: 28, height: 28)
-                    Text(frontContent)
+                    GeometryReader { geometry in
+                        Text(frontContent)
+                            
+                                                   .font(.title)
+                                                   .frame(width: geometry.size.width - 10, height: geometry.size.height - 20)
+                                           }
                         .multilineTextAlignment(.center)
+                        
                 }
                 .frame(width: 270, height: 288)
                 .background(Color("DarkModeColor"))
@@ -58,6 +67,7 @@ struct YourPathView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 40)
                         .inset(by: 2.5)
+                    
                         .stroke(Color(red: 0.56, green: 0.44, blue: 0.96))
                     )
             }
@@ -81,43 +91,61 @@ struct ContentViewYourPath: View {
     @State private var currentIndex: Int = 0
     @GestureState private var dragOffse:CGFloat = 0
     var body: some View {
-        ZStack{
+      ZStack {
             Color("DarkModeColor")
                 .ignoresSafeArea()
-        VStack{
-            Text("FindYourPath1")
-            .dynamicTypeSize(.xxxLarge)
-            .fontWeight(.bold)
-            .padding(.bottom,30)
-                .padding(.bottom,149)
-                .padding()
-            ZStack{
-                ForEach(0..<min(frontContents.count, backContents.count)) { index in
-                    VStack{
-                        YourPathView(frontContent: frontContents[index], backContent: backContents[index])
-                            .frame(width: 200, height: 300)
-                    }
-                    .frame(width: 270, height: 288)
-                    .opacity(currentIndex == index ? 1.0:0.5)
-                    .scaleEffect(currentIndex == index - 3 ? 0.1 : 1.0)
-                    .offset(x:CGFloat(index - currentIndex)*295+dragOffse,y:0)
-                }}
-            .gesture(
-                DragGesture()
-                    .onEnded({value in
-                        let threshold:CGFloat = 50
-                        if value.translation.width>threshold{
-                            withAnimation {
-                                currentIndex = max(0,currentIndex-1)
+
+            VStack {
+                Text("FindYourPath1")
+                    .font(.system(size: 30, weight: .bold))
+                    .padding(.bottom, 100)
+
+               
+                    // ... (existing code)
+
+                    ZStack {
+                        ForEach(0..<min(frontContents.count, backContents.count)) { index in
+                            VStack {
+                                YourPathView(frontContent: frontContents[index], backContent: backContents[index])
+                                    .frame(width: 200, height: 300)
                             }
-                        }else if value.translation.width < -threshold{
-                            withAnimation{
-                                currentIndex = min(frontContents.count, currentIndex + 1)
+                            .frame(width: 270, height: 288)
+                            .opacity(currentIndex == index ? 1.0 : 0.5)
+                            .scaleEffect(currentIndex == index - 3 ? 0.1 : 1.0)
+                            .offset(x: CGFloat(index - currentIndex) * 295 + dragOffse, y: 0)
+                        }
+
+                        // Page Indicator
+                        HStack(spacing: 10) {
+                            ForEach(0..<min(frontContents.count, backContents.count)) { index in
+                                Circle()
+                                    .fill(Color(red: 0.56, green: 0.44, blue: 0.96))
+                                    .frame(width: 10, height: 10)
+                                    .opacity(currentIndex == index ? 1.0 : 0.5)
                             }
                         }
-                    }))
+                        .padding(.top, 420)
+                    }
+                    .gesture(
+                        DragGesture()
+                            .onEnded({ value in
+                                let threshold: CGFloat = 1
+                                if value.translation.width > threshold {
+                                    withAnimation {
+                                        currentIndex = max(0, currentIndex - 1)
+                                    }
+                                } else if value.translation.width < -threshold {
+                                    withAnimation {
+                                        currentIndex = min(frontContents.count - 1, currentIndex + 1)
+                                    }
+                                }
+                            })
+                    )
+                
+
+                
+            }
         }
-    }
     }
 }
 #Preview {

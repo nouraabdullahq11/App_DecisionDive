@@ -14,60 +14,106 @@ struct ContentView: View {
          Color("DarkModeColor")
             .ignoresSafeArea()
                 VStack {
-                    HStack{
-                            Image("imageTop")
-                            .resizable()
-                                .frame(width: 60,height: 60)
-                        Image("textTop")
-                        .resizable()
-                            .frame(width: 250,height: 30)
-                        } //hstack for hello
-                        .padding(.trailing,60)
-                        .padding(.top,70)
-                        .padding(.bottom,50)
+//                    HStack{
+//                            Image("imageTop")
+//                            .resizable()
+//                            .frame(width: 60,height: 60)
+//                            .accessibilityLabel("App Logo")
+//                        
+//                        Image("textTop")
+//                        .resizable()
+//                            .frame(width: 250,height: 30)
+//
+//                        } //hstack for hello
+//                        .padding(.trailing,60)
+//                        .padding(.top,70)
+//                        .padding(.bottom,50)
+                        
+                    VStack{
 
-                        VStack{
-
-                           Spacer()
+                          Spacer()
                             
                             Text("StartYourJourney1")
-                                .font(.system(size: 25, weight: .bold))
-                                .padding(.trailing,150)
-                                .padding(.bottom,30)
+                                .font(.system(size: 35, weight: .bold))
+                            .padding(.trailing,150)
+                              .padding(.bottom,30)
                                 
+                           // VStack{
+                                Text("Note:advicesprovidedaregeneraladvices1")
+                                //Text("forassistancepurposesonly!1")
+                          //  }
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.gray)
+                                .padding()
+                                .padding(.bottom,30)
+                            //.font(
+                               // Font.custom("SF Pro Rounded", size: 15))
 //                                .padding(.top,15)
-                            HStack(spacing:10){
-                                VStack(spacing:15){
+                            HStack(spacing:5){
+                                VStack(spacing:5){
                                     
-                                    NavigationLink( destination: ContentViewDiscoverSelf()){
+                                    NavigationLink( destination: ContentViewYourPath()){
+                                        
                                         ZStack{
                                             
                                             Rectangle()
                                                 .foregroundColor(.clear)
-                                                .frame(width: 180, height: 200)
+                                                .frame(width: 180, height: 210)
                                                 .background(
                                                     LinearGradient(
                                                         stops: [
-                                                            Gradient.Stop(color: Color(red: 1, green: 0.82, blue: 0.62), location: 0.00),
-                                                            Gradient.Stop(color: Color(red: 1, green: 0.62, blue: 0.18), location: 1.00),
+                                                            Gradient.Stop(color: Color(red: 0.76, green: 0.69, blue: 1), location: 0.00),
+                                                            Gradient.Stop(color: Color(red: 0.56, green: 0.44, blue: 0.96), location: 1.00),
                                                         ],
-                                                        startPoint: UnitPoint(x: 0, y: 0),
-                                                        endPoint: UnitPoint(x: 1, y: 1.03)
+                                                        startPoint: UnitPoint(x: 0.5, y: 0),
+                                                        endPoint: UnitPoint(x: 0.5, y: 1)
                                                     )
                                                 )
                                                 .cornerRadius(15)
                                                 .shadow(color: Color(red: 0.55, green: 0.55, blue: 0.55).opacity(0.1), radius: 12.5, x: 0, y: 4)
                                             
-                                            Text("DiscoverYourSelf1")
+                                            
+                                            
+                                            Text("FindYourPath1")
                                                 .font(
                                                     Font.custom("SF Pro Rounded", size: 25)
-                                                        .weight(.bold)
+                                                    //.weight(.bold)
                                                 )
                                             // .multilineTextAlignment(.center)
-                                                .foregroundColor(.white)
+                                                .foregroundColor(Color("darkText"))
                                                 .frame(width: 116, height: 80, alignment: .center)
-                                        }//zstack right box
-                                    }//.padding(.bottom,45)
+                                        }//zstack left box
+                                        
+                                    }
+//                                    NavigationLink( destination: ContentViewDiscoverSelf()){
+//                                        ZStack{
+//
+//                                            Rectangle()
+//                                                .foregroundColor(.clear)
+//                                                .frame(width: 180, height: 200)
+//                                                .background(
+//                                                    LinearGradient(
+//                                                        stops: [
+//                                                            Gradient.Stop(color: Color(red: 1, green: 0.82, blue: 0.62), location: 0.00),
+//                                                            Gradient.Stop(color: Color(red: 1, green: 0.62, blue: 0.18), location: 1.00),
+//                                                        ],
+//                                                        startPoint: UnitPoint(x: 0, y: 0),
+//                                                        endPoint: UnitPoint(x: 1, y: 1.03)
+//                                                    )
+//                                                )
+//                                                .cornerRadius(15)
+//                                                .shadow(color: Color(red: 0.55, green: 0.55, blue: 0.55).opacity(0.1), radius: 12.5, x: 0, y: 4)
+//
+//                                            Text("DiscoverYourSelf1")
+//                                                .font(
+//                                                    Font.custom("SF Pro Rounded", size: 25)
+//                                                        .weight(.bold)
+//                                                )
+//                                            // .multilineTextAlignment(.center)
+//                                                .foregroundColor(.white)
+//                                                .frame(width: 116, height: 80, alignment: .center)
+//                                        }//zstack right box
+//                                    }//.padding(.bottom,45)
                                     
                                     //navigate right box
                                     
@@ -76,7 +122,7 @@ struct ContentView: View {
                                             
                                             Rectangle()
                                                 .foregroundColor(.clear)
-                                                .frame(width: 180, height: 250)
+                                                .frame(width: 180, height: 260)
                                                 .background(
                                                     LinearGradient(
                                                         stops: [
@@ -92,20 +138,20 @@ struct ContentView: View {
                                             
                                             Text("FindYourDestination1")
                                                 .font(
-                                                    Font.custom("SF Pro Rounded", size: 20)
+                                                    Font.custom("SF Pro Rounded", size: 25)
                                                     //.weight(.bold)
                                                 )
                                             //.multilineTextAlignment(.center)
-                                                .foregroundColor(.white)
+                                                .foregroundColor(Color("darkText"))
                                             
-                                                .frame(width: 110, height: 80, alignment: .center)
+                                              //  .frame(width: 110, height: 80, alignment: .center)
                                             
                                         }//zstack right box
                                         
                                     }
-                                }.padding(.bottom,50)
+                                }//.padding(.bottom,50)
                                 
-                                VStack(spacing:15){
+                                VStack(spacing:5){
                                     NavigationLink( destination: ContentViewSport()){
                                         
                                         
@@ -113,7 +159,7 @@ struct ContentView: View {
                                             
                                             Rectangle()
                                                 .foregroundColor(.clear)
-                                                .frame(width: 180, height: 250)
+                                                .frame(width: 180, height: 260)
                                                 .background(
                                                     LinearGradient(
                                                         stops: [
@@ -133,7 +179,7 @@ struct ContentView: View {
                                                     //.weight(.bold)
                                                 )
                                             //.multilineTextAlignment(.center)
-                                                .foregroundColor(.white)
+                                                .foregroundColor(Color("darkText"))
                                             
                                                 .frame(width: 110, height: 80, alignment: .center)
                                             
@@ -141,51 +187,81 @@ struct ContentView: View {
                                         
                                     }//navigate left box
                                     
-                                    NavigationLink( destination: ContentViewYourPath()){
-                                        
+//                                    NavigationLink( destination: ContentViewYourPath()){
+//
+//                                        ZStack{
+//
+//                                            Rectangle()
+//                                                .foregroundColor(.clear)
+//                                                .frame(width: 180, height: 200)
+//                                                .background(
+//                                                    LinearGradient(
+//                                                        stops: [
+//                                                            Gradient.Stop(color: Color(red: 0.76, green: 0.69, blue: 1), location: 0.00),
+//                                                            Gradient.Stop(color: Color(red: 0.56, green: 0.44, blue: 0.96), location: 1.00),
+//                                                        ],
+//                                                        startPoint: UnitPoint(x: 0.5, y: 0),
+//                                                        endPoint: UnitPoint(x: 0.5, y: 1)
+//                                                    )
+//                                                )
+//                                                .cornerRadius(15)
+//                                                .shadow(color: Color(red: 0.55, green: 0.55, blue: 0.55).opacity(0.1), radius: 12.5, x: 0, y: 4)
+//
+//
+//
+//                                            Text("FindYourPath1")
+//                                                .font(
+//                                                    Font.custom("SF Pro Rounded", size: 25)
+//                                                        .weight(.bold)
+//                                                )
+//                                            // .multilineTextAlignment(.center)
+//                                                .foregroundColor(.white)
+//                                                .frame(width: 116, height: 80, alignment: .center)
+//                                        }//zstack left box
+//
+//                                    }
+                                    NavigationLink( destination: ContentViewDiscoverSelf()){
                                         ZStack{
                                             
                                             Rectangle()
                                                 .foregroundColor(.clear)
-                                                .frame(width: 180, height: 200)
+                                                .frame(width: 180, height: 210)
                                                 .background(
                                                     LinearGradient(
                                                         stops: [
-                                                            Gradient.Stop(color: Color(red: 0.76, green: 0.69, blue: 1), location: 0.00),
-                                                            Gradient.Stop(color: Color(red: 0.56, green: 0.44, blue: 0.96), location: 1.00),
+                                                            Gradient.Stop(color: Color(red: 1, green: 0.82, blue: 0.62), location: 0.00),
+                                                            Gradient.Stop(color: Color(red: 1, green: 0.62, blue: 0.18), location: 1.00),
                                                         ],
-                                                        startPoint: UnitPoint(x: 0.5, y: 0),
-                                                        endPoint: UnitPoint(x: 0.5, y: 1)
+                                                        startPoint: UnitPoint(x: 0, y: 0),
+                                                        endPoint: UnitPoint(x: 1, y: 1.03)
                                                     )
                                                 )
                                                 .cornerRadius(15)
                                                 .shadow(color: Color(red: 0.55, green: 0.55, blue: 0.55).opacity(0.1), radius: 12.5, x: 0, y: 4)
                                             
-                                            
-                                            
-                                            Text("FindYourPath1")
+                                            Text("DiscoverYourSelf1")
                                                 .font(
                                                     Font.custom("SF Pro Rounded", size: 25)
                                                         .weight(.bold)
                                                 )
                                             // .multilineTextAlignment(.center)
-                                                .foregroundColor(.white)
+                                                .foregroundColor(Color("darkText"))
                                                 .frame(width: 116, height: 80, alignment: .center)
-                                        }//zstack left box
-                                        
+                                        }//zstack right box
                                     }
-                                }.padding(.bottom,50)
+                                }//.padding(.bottom,50)
                                 
                                 
                             }//first row of boxes
-                            VStack{
-                                Text("Note:advicesprovidedaregeneraladvices1")
-                                Text("forassistancepurposesonly!1")
-                            } .multilineTextAlignment(.center)
-                                .foregroundColor(.gray)
-                                .padding(.bottom,40)
-                            .font(
-                                Font.custom("SF Pro Rounded", size: 15))
+                        Spacer()
+//                            VStack{
+//                                Text("Note:advicesprovidedaregeneraladvices1")
+//                                //Text("forassistancepurposesonly!1")
+//                            } .multilineTextAlignment(.center)
+//                                .foregroundColor(.gray)
+//                                .padding(.bottom,40)
+//                            .font(
+//                                Font.custom("SF Pro Rounded", size: 15))
                         }//vstack for the boxes
 
                 }

@@ -19,6 +19,8 @@ struct SportView: View {
                         Image(systemName: "repeat")
                             .padding(.init(top: 50, leading: 0, bottom: 0, trailing: 200))
                             .frame(width: 28, height: 28)
+                            .foregroundColor(.black)
+
 //                        Text(backContent)
 //                            .rotation3DEffect(
 //                                .degrees(180.0),
@@ -29,10 +31,10 @@ struct SportView: View {
                         GeometryReader { geometry in
                             Text(backContent)
                                 .rotation3DEffect(
-                                    .degrees(180.0),
+                                 .degrees(180.0),
                                     axis: (x: 0.0, y: 1.0, z: 0.0))
                                                        .font(.title)
-                                                       .frame(width: geometry.size.width - 20, height: geometry.size.height - 20)
+                                                       .frame(width: geometry.size.width - 10, height: geometry.size.height - 20)
                                                }
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.16, green: 0.18, blue: 0.2))
@@ -53,11 +55,16 @@ struct SportView: View {
                 } else {
                     VStack{
                         Image(systemName: "repeat")
-                            .padding(.init(top: 80, leading: 200, bottom: 150, trailing: 20))
+                            .padding(.init(top: 40, leading: 200, bottom: 0, trailing: 0))
                             .frame(width: 28, height: 28)
-                        Text(frontContent)
+                        GeometryReader { geometry in
+                            Text(frontContent)
+                                
+                                                       .font(.title)
+                                                       .frame(width: geometry.size.width - 10, height: geometry.size.height - 20)
+                                               }
                             .multilineTextAlignment(.center)
-                    }
+                                                }
                     .frame(width: 270, height: 288)
                     .background(Color("DarkModeColor"))
                     .cornerRadius(40)
@@ -93,34 +100,46 @@ struct SportView: View {
                     .ignoresSafeArea()
             VStack{
                 Text("FindYourSport1")
-                    .padding(.bottom,149)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                ZStack{
+                    .font(.system(size: 30, weight: .bold))
+                    .padding(.bottom, 100)
+                ZStack {
                     ForEach(0..<min(frontContents.count, backContents.count)) { index in
-                        VStack{
+                        VStack {
                             SportView(frontContent: frontContents[index], backContent: backContents[index])
                                 .frame(width: 200, height: 300)
                         }
                         .frame(width: 270, height: 288)
-                        .opacity(currentIndex == index ? 1.0:0.5)
+                        .opacity(currentIndex == index ? 1.0 : 0.5)
                         .scaleEffect(currentIndex == index - 3 ? 0.1 : 1.0)
-                        .offset(x:CGFloat(index - currentIndex)*295+dragOffse,y:0)
-                    }}
+                        .offset(x: CGFloat(index - currentIndex) * 295 + dragOffse, y: 0)
+                    }
+
+                    // Page Indicator
+                    HStack(spacing: 10) {
+                        ForEach(0..<min(frontContents.count, backContents.count)) { index in
+                            Circle()
+                                .fill(Color(red: 0, green: 0.7, blue: 0.53))
+                                .frame(width: 10, height: 10)
+                                .opacity(currentIndex == index ? 1.0 : 0.5)
+                        }
+                    }
+                    .padding(.top, 420)
+                }
                 .gesture(
                     DragGesture()
-                        .onEnded({value in
-                            let threshold:CGFloat = 50
-                            if value.translation.width>threshold{
+                        .onEnded({ value in
+                            let threshold: CGFloat = 1
+                            if value.translation.width > threshold {
                                 withAnimation {
-                                    currentIndex = max(0,currentIndex-1)
+                                    currentIndex = max(0, currentIndex - 1)
                                 }
-                            }else if value.translation.width < -threshold{
-                                withAnimation{
-                                    currentIndex = min(frontContents.count, currentIndex + 1)
+                            } else if value.translation.width < -threshold {
+                                withAnimation {
+                                    currentIndex = min(frontContents.count - 1, currentIndex + 1)
                                 }
                             }
-                        }))
+                        })
+                )
             }
         }
         }
